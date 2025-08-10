@@ -3,31 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Seja Revendedor - Renen Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      padding: 20px;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f0f0f0, #dfe9f3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
     .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
       max-width: 500px;
-      margin: auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
+      width: 90%;
     }
-    input, textarea, button {
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    input, textarea {
       width: 100%;
+      padding: 12px;
       margin-top: 10px;
-      padding: 10px;
-      border-radius: 5px;
       border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
     }
     button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
       background-color: #25D366;
       color: white;
+      font-size: 16px;
       border: none;
+      border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
     button:hover {
       background-color: #128C7E;
@@ -40,10 +62,9 @@
     <p>Preencha o formulário abaixo e envie sua candidatura direto pelo WhatsApp!</p>
 
     <form id="formulario">
-      <input type="text" id="nome" placeholder="Seu nome completo" required>
-      <input type="text" id="cidade" placeholder="Cidade / Estado" required>
+      <input type="text" id="nome" placeholder="Seu nome ou apelido" required>
       <input type="text" id="instagram" placeholder="Instagram ou rede social">
-      <textarea id="mensagem" placeholder="Por que você quer ser revendedor?" required></textarea>
+      <textarea id="mensagem" placeholder="Por que você quer ser revendedor da Renen Store?" required></textarea>
       <button type="submit">Enviar pelo WhatsApp</button>
     </form>
   </div>
@@ -52,11 +73,10 @@
     document.getElementById("formulario").addEventListener("submit", function(e) {
       e.preventDefault();
       const nome = document.getElementById("nome").value;
-      const cidade = document.getElementById("cidade").value;
       const instagram = document.getElementById("instagram").value;
       const motivo = document.getElementById("mensagem").value;
 
-      const texto = `Olá! Me chamo ${nome}, sou de ${cidade}. Meu Instagram é ${instagram}. Quero ser revendedor da Renen Store porque: ${motivo}`;
+      const texto = `Olá! Me chamo ${nome}. Meu Instagram é ${instagram}. Quero ser revendedor da Renen Store porque: ${motivo}`;
       const numero = "558391758791"; // Seu número com DDD
       const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
       window.open(link, "_blank");
