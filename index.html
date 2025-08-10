@@ -3,116 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kamyca Store</title>
+  <title>Kamyca Design</title>
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      background: linear-gradient(135deg, #ffdee9, #b5fffc);
-      min-height: 100vh;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7); /* Fundo estiloso */
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 40px;
+      height: 100vh;
     }
 
     .container {
       display: flex;
-      flex-wrap: wrap;
       gap: 30px;
+      flex-wrap: wrap;
       justify-content: center;
-      max-width: 1200px;
     }
 
     .card {
-      background: white;
-      width: 280px;
-      height: 350px;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background-color: white;
+      width: 250px;
+      height: 300px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      padding: 25px;
+      align-items: center;
+      padding: 20px;
       text-align: center;
-      cursor: pointer;
     }
 
     .card:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
     .card img {
-      width: 90px;
-      height: 90px;
-      margin-bottom: 20px;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
-      font-size: 22px;
-      color: #333;
       margin-bottom: 10px;
+      color: #333;
     }
 
     .card p {
-      font-size: 15px;
       color: #666;
-    }
-
-    /* Botão flutuante do WhatsApp */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      text-decoration: none;
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp:hover {
-      transform: scale(1.1);
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Revenda" />
-      <h3>Seja Revendedor</h3>
-      <p>Ganhe dinheiro com nossos produtos exclusivos. Estilo e qualidade garantidos!</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Ícone" />
+      <h3>Revenda Kamyca</h3>
+      <p>Produtos exclusivos para revendedores. Qualidade e estilo garantidos!</p>
     </div>
 
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Contato" />
-      <h3>Fale Conosco</h3>
-      <p>Atendimento rápido e personalizado via WhatsApp. Tire suas dúvidas!</p>
-    </div>
-
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="Loja" />
-      <h3>Conheça a Loja</h3>
-      <p>Explore nossos produtos e encontre o que combina com você!</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Ícone" />
+      <h3>Contato</h3>
+      <p>Fale com a gente pelo WhatsApp e tire suas dúvidas rapidinho!</p>
     </div>
   </div>
-
-  <a href="https://wa.me/55SEUNUMERO" class="whatsapp" target="_blank">💬</a>
 </body>
 </html>
