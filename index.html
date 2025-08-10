@@ -1,27 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Cadastro de Revendedor - Renen Store</title>
+  <meta charset="UTF-8">
+  <title>Seja Revendedor - Renen Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #128C7E;
+    }
+  </style>
 </head>
 <body>
-  <h1>Seja um Revendedor da Renen Store</h1>
-  <form action="https://wa.me/558391758791" method="get" target="_blank">
-    <label>Nome:</label><br>
-    <input type="text" name="nome"><br><br>
+  <div class="container">
+    <h2>Seja um Revendedor da Renen Store</h2>
+    <p>Preencha o formulário abaixo e envie sua candidatura direto pelo WhatsApp!</p>
 
-    <label>Idade:</label><br>
-    <input type="text" name="idade"><br><br>
+    <form id="formulario">
+      <input type="text" id="nome" placeholder="Seu nome completo" required>
+      <input type="text" id="cidade" placeholder="Cidade / Estado" required>
+      <input type="text" id="instagram" placeholder="Instagram ou rede social">
+      <textarea id="mensagem" placeholder="Por que você quer ser revendedor?" required></textarea>
+      <button type="submit">Enviar pelo WhatsApp</button>
+    </form>
+  </div>
 
-    <label>Cidade/Estado:</label><br>
-    <input type="text" name="cidade"><br><br>
+  <script>
+    document.getElementById("formulario").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const cidade = document.getElementById("cidade").value;
+      const instagram = document.getElementById("instagram").value;
+      const motivo = document.getElementById("mensagem").value;
 
-    <label>Instagram ou rede social:</label><br>
-    <input type="text" name="instagram"><br><br>
-
-    <label>Por que quer ser revendedor?</label><br>
-    <textarea name="motivo"></textarea><br><br>
-
-    <button type="submit">Enviar pelo WhatsApp</button>
-  </form>
+      const texto = `Olá! Me chamo ${nome}, sou de ${cidade}. Meu Instagram é ${instagram}. Quero ser revendedor da Renen Store porque: ${motivo}`;
+      const numero = "558391758791"; // Seu número com DDD
+      const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      window.open(link, "_blank");
+    });
+  </script>
 </body>
 </html>
