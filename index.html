@@ -76,7 +76,11 @@
       const instagram = document.getElementById("instagram").value;
       const motivo = document.getElementById("mensagem").value;
 
-      const texto = `Olá! Me chamo ${nome}. Meu Instagram é ${instagram}. Quero ser revendedor da Renen Store porque: ${motivo}`;
+      const texto = `*Cadastro de Revendedor Renen Store*\n\n` +
+                    `*Nome ou apelido:* ${nome}\n` +
+                    `*Instagram:* ${instagram}\n` +
+                    `*Motivo:* ${motivo}`;
+
       const numero = "558391758791"; // Seu número com DDD
       const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
       window.open(link, "_blank");
