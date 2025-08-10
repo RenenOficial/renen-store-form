@@ -8,7 +8,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4); /* Fundo vibrante */
+      background: url('SUA_IMAGEM_EDITADA_AQUI.jpg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,10 +17,10 @@
     }
 
     .container {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.15);
+      box-shadow: 0 0 25px rgba(0,0,0,0.2);
       max-width: 500px;
       width: 90%;
     }
@@ -36,34 +37,19 @@
       margin-bottom: 20px;
     }
 
-    .input-group {
-      position: relative;
-      margin-top: 15px;
-    }
-
-    .input-group input,
-    .input-group textarea {
+    input, textarea {
       width: 100%;
-      padding: 12px 40px 12px 12px;
+      padding: 12px;
+      margin-top: 10px;
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 16px;
     }
 
-    .input-group::before {
-      content: attr(data-icon);
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 18px;
-      color: #999;
-    }
-
     button {
       width: 100%;
       padding: 14px;
-      margin-top: 25px;
+      margin-top: 20px;
       background-color: #25D366;
       color: white;
       font-size: 16px;
@@ -84,15 +70,9 @@
     <p>Preencha o formulário abaixo e envie sua candidatura direto pelo WhatsApp!</p>
 
     <form id="formulario">
-      <div class="input-group" data-icon="👤">
-        <input type="text" id="nome" placeholder="Seu nome ou apelido" required>
-      </div>
-      <div class="input-group" data-icon="📸">
-        <input type="text" id="instagram" placeholder="Instagram ou rede social">
-      </div>
-      <div class="input-group" data-icon="📝">
-        <textarea id="mensagem" placeholder="Por que você quer ser revendedor da Renen Store?" required></textarea>
-      </div>
+      <input type="text" id="nome" placeholder="Seu nome ou apelido" required>
+      <input type="text" id="instagram" placeholder="Instagram ou rede social">
+      <textarea id="mensagem" placeholder="Por que você quer ser revendedor da Renen Store?" required></textarea>
       <button type="submit">Enviar pelo WhatsApp</button>
     </form>
   </div>
